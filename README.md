@@ -64,7 +64,7 @@ Drop your images into `src/assets/`. Supported formats: `jpg`, `jpeg`, `png`, `w
 Preview changes live with `npm run dev`.
 
 <br>
-4
+
 ## 🎨 Customization
 
 | What | Where |
@@ -79,16 +79,30 @@ Preview changes live with `npm run dev`.
 
 ## 📦 Deploy to GitHub Pages
 
-1. Create a repo on GitHub (e.g. `shiros-gallery`, `gallery`, or any name)
-2. Push to `main`
-3. Go to **Settings → Pages → Source** and select **GitHub Actions**
-4. The included [workflow](.github/workflows/deploy.yml) builds and deploys on every push
+Choose the guide that fits your situation.
 
-> **Important:** Match `base` in `astro.config.mjs` to your repo name:
-> ```js
-> base: '/your-repo-name/',
-> ```
-> For a user site (`<username>.github.io`), use `base: '/'`.
+### I already have a `<username>.github.io` page
+
+Creates the gallery as a separate project hosted at a subpath.
+
+1. Create a new repo on GitHub (e.g. `gallery`, `shiros-gallery`, etc.)
+2. Update `base` in [`astro.config.mjs`](astro.config.mjs) to match your repo name:
+   ```js
+   base: '/your-repo-name/',   // e.g. '/gallery/' or '/shiros-gallery/'
+   ```
+3. Push to `main`
+4. Go to **Settings → Pages → Source**, select **GitHub Actions**
+5. The gallery will be live at `https://your-username.github.io/your-repo-name/`
+
+### I'm starting fresh — no GitHub Page yet
+
+Creates the gallery at the root of your personal site.
+
+1. Create a repo named `<your-username>.github.io`
+2. Set `base: '/'` in [`astro.config.mjs`](astro.config.mjs) (already the default)
+3. Push to `main`
+4. Go to **Settings → Pages → Source**, select **GitHub Actions**
+5. The gallery will be live at `https://your-username.github.io/`
 
 <br>
 
