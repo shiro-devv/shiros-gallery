@@ -5,7 +5,7 @@ export interface Props {
   title?: string
 }
 
-const { title = "Gallery" } = Astro.props
+const { title = "Shiro's Gallery" } = Astro.props
 ---
 
 <!doctype html>
@@ -13,7 +13,7 @@ const { title = "Gallery" } = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>" />
     <title>{title}</title>
   </head>
   <body class="antialiased">
