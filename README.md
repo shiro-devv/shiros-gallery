@@ -79,14 +79,16 @@ Preview changes live with `npm run dev`.
 
 ## 📦 Deploy to GitHub Pages
 
-1. Push to `main` on your GitHub repo
-2. Go to **Settings → Pages → Source** and select **GitHub Actions**
-3. The included [workflow](.github/workflows/deploy.yml) builds and deploys on every push
+1. Create a repo on GitHub (e.g. `shiros-gallery`, `gallery`, or any name)
+2. Push to `main`
+3. Go to **Settings → Pages → Source** and select **GitHub Actions**
+4. The included [workflow](.github/workflows/deploy.yml) builds and deploys on every push
 
-> **Using a project repo?** Update `base` in `astro.config.mjs`:
+> **Important:** Match `base` in `astro.config.mjs` to your repo name:
 > ```js
 > base: '/your-repo-name/',
 > ```
+> For a user site (`<username>.github.io`), use `base: '/'`.
 
 <br>
 

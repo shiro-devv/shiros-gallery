@@ -7,8 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://shiros-gallery.github.io',
-  base: '/',
+  site: 'https://shiro-devv.github.io',
+  base: '/shiros-gallery/',
   output: 'static',
   integrations: [react()],
 
