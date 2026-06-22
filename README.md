@@ -45,8 +45,8 @@
 ## 🚀 Quick Start
 
 ```sh
-git clone https://github.com/shiro-devv/shiros-gallery.github.io
-cd shiros-gallery.github.io
+git clone https://github.com/shiro-devv/shiros-gallery
+cd shiros-gallery
 npm install
 npm run dev
 ```
