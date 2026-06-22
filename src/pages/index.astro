@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { GalleryApp } from "../components/GalleryApp"
+
+const imageModules = import.meta.glob<string>("../assets/*.{jpg,jpeg,png,webp,avif}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+})
+
+const images = Object.entries(imageModules).map(([path, src]) => {
+  const name = path.split("/").pop()?.replace(/\.[^.]+$/, "") || "Gallery image"
+  return { src, alt: name }
+})
+---
+
+<Layout title="Gallery">
+  <GalleryApp client:load images={images} />
+</Layout>
